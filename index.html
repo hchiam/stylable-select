@@ -2,18 +2,68 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/hchiam/css-boilerplate@6.0.0/style.css"
-      integrity="sha384-thHsntRltFQFgrHgl7/avBhQ+uXkABJlP8wgGW62xGYYlLgaPGbEFQ0xdPcVDDI8"
-      crossorigin="anonymous"
-    />
+    <title>Demo</title>
+    <link rel="stylesheet" href="CodePen.scss" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
+    {{> CodePen }}
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: avenir, tahoma, monospace;
+        display: flex;
+        /*
+        justify-content: center;
+        align-items: center;
+        */
+        width: 200vw;
+        height: 150vh;
+        /* padding-left: 100vh; */
+        /* padding-top: 100vh; */
+      }
+
+      main {
+        width: 100%;
+        margin: 1rem;
+        /* text-align: right; */
+      }
+
+      button.focus {
+        width: 35ch;
+        padding-block: 0.5rem;
+      }
+
+      #activeElement {
+        position: fixed;
+        bottom: 10px;
+        color: grey;
+      }
+
+      .simulated-select,
+      .simulated-select-options-wrapper {
+        animation: highlight 3s;
+      }
+
+      @keyframes highlight {
+        from {
+          background: lime;
+          outline: 3px solid lime;
+        }
+
+        to {
+          background: revert;
+          outline: revert;
+        }
+      }
+    </style>
+    <script src="CodePen.js"></script>
   </body>
 </html>

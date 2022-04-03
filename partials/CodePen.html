@@ -1,0 +1,106 @@
+<main>
+  <p>
+    <button class="focus">Click me to set focus inside demo iframe.</button>
+  </p>
+
+  <p>Other content above the dropdown.</p>
+
+  <div class="simulated-select">
+    <div class="simulated-select-options-wrapper" tabindex="0" role="listbox">
+      <button role="option" aria-selected="false" tabindex="-1">Select</button>
+      <button role="option" aria-selected="false" tabindex="-1">Apple</button>
+      <button role="option" aria-selected="false" tabindex="-1">Banana</button>
+      <button role="option" aria-selected="false" tabindex="-1">Coconut</button>
+      <button role="option" aria-selected="false" tabindex="-1">Durian</button>
+      <button role="option" aria-selected="false" tabindex="-1">
+        Eggplant
+      </button>
+      <button role="option" aria-selected="false" tabindex="-1">Fig</button>
+      <button role="option" aria-selected="false" tabindex="-1">Grape</button>
+      <button role="option" aria-selected="false" tabindex="-1">
+        Honeydew
+      </button>
+      <button role="option" aria-selected="false" tabindex="-1">
+        Icecream
+      </button>
+      <button role="option" aria-selected="false" tabindex="-1">
+        Jackfruit
+      </button>
+      <button role="option" aria-selected="false" tabindex="-1">Kiwi</button>
+      <button role="option" aria-selected="false" tabindex="-1">Lemon</button>
+      <button role="option" aria-selected="false" tabindex="-1">Mango</button>
+      <button role="option" aria-selected="false" tabindex="-1">
+        Nectarine
+      </button>
+      <button role="option" aria-selected="false" tabindex="-1">Orange</button>
+      <button role="option" aria-selected="false" tabindex="-1">Peach</button>
+    </div>
+    <div
+      class="simulated-select-options-end"
+      tabindex="0"
+      aria-label="end of options"
+    ></div>
+  </div>
+
+  <p>Other content below the dropdown. <button>Some button</button></p>
+
+  <p>Tested on Chrome, Firefox, Mac, Android.</p>
+
+  <p><small id="activeElement"></small></p>
+</main>
+
+<style>
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: avenir, tahoma, monospace;
+    display: flex;
+    /*
+    justify-content: center;
+    align-items: center;
+    */
+    width: 200vw;
+    height: 150vh;
+    /* padding-left: 100vh; */
+    /* padding-top: 100vh; */
+  }
+
+  main {
+    width: 100%;
+    margin: 1rem;
+    /* text-align: right; */
+  }
+
+  button.focus {
+    width: 35ch;
+    padding-block: 0.5rem;
+  }
+
+  #activeElement {
+    position: fixed;
+    bottom: 10px;
+    color: grey;
+  }
+
+  .simulated-select,
+  .simulated-select-options-wrapper {
+    animation: highlight 3s;
+  }
+
+  @keyframes highlight {
+    from {
+      background: lime;
+      outline: 3px solid lime;
+    }
+
+    to {
+      background: revert;
+      outline: revert;
+    }
+  }
+</style>

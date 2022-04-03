@@ -1,0 +1,98 @@
+.simulated-select {
+  --select-height: 2rem;
+  --max-items: 5;
+  --selected-background: #bfd4ed;
+  --selected-color: #000;
+  position: relative;
+  position: sticky;
+  inset: 0;
+  isolation: isolate;
+  height: var(--select-height);
+  width: fit-content;
+
+  .simulated-select-options-end {
+    /* to give the illusion that the dropdown is focused: */
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 0.25rem;
+    z-index: -1;
+    pointer-events: none;
+
+    /* so no need to make visually hidden: */
+    // position: absolute;
+    // overflow: hidden;
+    // clip: rect(0 0 0 0);
+    // height: 1px;
+    // width: 1px;
+    // margin: -1px;
+    // padding: 0;
+    // border: 0;
+  }
+
+  .simulated-select-options-wrapper {
+    display: flex;
+    flex-direction: column;
+    // position: absolute; // disable position so option can go to top
+    box-sizing: border-box;
+    max-width: max-content;
+    border-radius: 0.25rem;
+    height: var(--select-height);
+    max-height: calc(var(--max-items) * var(--select-height));
+
+    > [role="option"] {
+      box-sizing: border-box;
+      height: var(--select-height);
+      width: 100%;
+      border-radius: 0;
+      border: none;
+      border-top: 1px solid #dee2e6;
+      background: #fff;
+      color: #0053b8;
+      cursor: pointer;
+      padding: 0.5rem;
+      line-height: 1rem;
+      margin-right: 2rem;
+      text-align: left;
+      white-space: nowrap;
+      &:focus,
+      &:hover,
+      &[selected] {
+        background: var(--selected-background);
+        color: var(--selected-color);
+        outline-offset: -2px;
+      }
+      &[selected] {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.simulated-select-options-wrapper:not(:focus-within) {
+  overflow: hidden;
+
+  > [role="option"] {
+    background: lightgrey;
+    color: var(--selected-color);
+
+    &[selected] {
+      position: absolute;
+      top: 0;
+      background: revert;
+      font-weight: revert;
+    }
+  }
+}
+
+.simulated-select-options-wrapper:focus,
+.simulated-select-options-wrapper:focus-within {
+  height: revert;
+  box-shadow: rgb(0 0 0 / 50%) 0px 2px 4px 0px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: sticky !important;
+  inset: 0;
+}

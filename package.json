@@ -7,6 +7,11 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^2.7.2"
+    "sass": "^1.49.11",
+    "vite": "^2.7.2",
+    "vite-plugin-handlebars": "^1.6.0"
+  },
+  "dependencies": {
+    "jquery": "3.5.1"
   }
 }
