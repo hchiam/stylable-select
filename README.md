@@ -12,6 +12,8 @@ https://codepen.io/hchiam/pen/wvprLpV
 
 ## To run this GitHub repo demo:
 
+(You'll need [`yarn`](https://github.com/hchiam/learning-yarn) set up.)
+
 ```sh
 git clone https://github.com/hchiam/stylable-select
 cd stylable-select
@@ -19,8 +21,6 @@ yarn
 yarn dev
 # http://localhost:3000
 ```
-
-(You'll need [`yarn`](https://github.com/hchiam/learning-yarn) set up.)
 
 ## To update this GitHub repo demo:
 
