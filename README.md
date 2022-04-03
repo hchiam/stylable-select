@@ -1,4 +1,4 @@
-# stylable-select
+# stylable-select [![version](https://img.shields.io/github/release/hchiam/stylable-select)](https://github.com/hchiam/stylable-select/releases)
 
 A simulated select dropdown that can be styled with CSS across all browsers/OSs.
 
