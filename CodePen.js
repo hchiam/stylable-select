@@ -80,11 +80,13 @@ function hitSpacebar(event) {
 }
 
 function hitArrowUp(event) {
-  return event.key === "ArrowUp";
+  var key = event.key || event.code || event.keyCode || event.which || event;
+  return key === "ArrowUp" || key === 38;
 }
 
 function hitArrowDown(event) {
-  return event.key === "ArrowDown";
+  var key = event.key || event.code || event.keyCode || event.which || event;
+  return key === "ArrowDown" || key === 40;
 }
 
 ///////
