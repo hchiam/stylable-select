@@ -12,6 +12,9 @@ simulatedSelect
     previousSelection.removeAttr("selected").attr("aria-selected", "false");
     option.attr("selected", "selected");
     option.attr("aria-selected", "true");
+
+    options.attr("tabindex", "0"); // enable styles related to focus for mouse users
+
     optionsEnd.attr("aria-label", `You selected: ${option.text()}`);
   })
   .on("focus", function (e) {
