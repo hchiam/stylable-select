@@ -1,0 +1,21 @@
+body > h1,
+body > p {
+  text-align: center;
+}
+
+main {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  background: #333;
+  height: 400px;
+  margin-block: 1rem;
+}
+
+.instruction {
+  color: lime;
+  background: black;
+  width: fit-content;
+  padding-inline: 1rem;
+  margin: 3rem auto 1rem;
+}

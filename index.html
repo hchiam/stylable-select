@@ -8,6 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
+    <p id="example_prompt">Go to <a href="/example/">/example/</a></p>
     {{> CodePen }}
     <style>
       html,
@@ -39,6 +40,12 @@
       button.focus {
         width: 35ch;
         padding-block: 0.5rem;
+      }
+
+      #example_prompt {
+        position: fixed;
+        top: 1rem;
+        right: 2rem;
       }
 
       #activeElement {

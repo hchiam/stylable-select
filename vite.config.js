@@ -7,4 +7,12 @@ export default {
       partialDirectory: resolve(__dirname, "partials"),
     }),
   ],
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        example: resolve(__dirname, 'example/index.html')
+      }
+    }
+  }
 };

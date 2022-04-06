@@ -1,0 +1,71 @@
+@import 'on-circle';
+
+.simulated-select {
+  margin: -200px auto 0;
+
+  .simulated-select-options-wrapper {
+    max-width: 500px;
+    max-height: 500px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    [role="option"] {
+      border-radius: 1rem !important;
+      line-height: 0;
+      height: 2rem !important;
+      padding: 1rem !important;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      transition: width 0.2s, background 0.5s;
+      text-decoration: none;
+
+      &[value=""] {
+        width: 100%;
+      }
+
+      &:not([value=""]) {
+        color: transparent;
+        width: 2rem !important;
+      }
+
+      &::first-letter {
+        color: black;
+        margin-left: -0.5ch;
+      }
+
+      &:focus {
+        color: revert;
+        width: 100% !important;
+        background: rgba(255, 255, 0, 0.75);
+        outline: 3px solid lime;
+        z-index: 1;
+      }
+      
+      &[selected] {
+        color: revert;
+      }
+
+    }
+
+  }
+
+  .simulated-select-options-wrapper:not(:focus-within) {
+    [role="option"] {
+      width: 100% !important;
+    }
+  }
+
+  .simulated-select-options-wrapper:focus-within {
+    @include on-circle($item-count: 17, $circle-size: 300px, $item-size: 1rem);
+    overflow: hidden;
+    width: 400px;
+    height: 400px;
+
+    [role="option"] {
+      margin: -1rem;
+    }
+  }
+
+}
