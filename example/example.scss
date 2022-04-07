@@ -1,5 +1,18 @@
 @import 'on-circle';
 
+html {
+  --br: 1rem !important;
+}
+
+.simulated-select,
+.simulated-select-options-wrapper,
+.simulated-select-options-end {
+  border-radius: var(--br) !important;
+  &:focus {
+    outline-offset: 5px;
+  }
+}
+
 .simulated-select {
   margin: -200px auto 0;
 
@@ -11,10 +24,11 @@
     flex-wrap: wrap;
 
     [role="option"] {
-      border-radius: 1rem !important;
+      border-radius: var(--br) !important;
       line-height: 0;
       height: 2rem !important;
       padding: 1rem !important;
+      margin: 0;
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
@@ -68,4 +82,64 @@
     }
   }
 
+}
+
+.simulated-select .simulated-select-options-wrapper [role="option"] {
+  border: none !important;
+
+  &:nth-child(2):not(:focus) {
+    background: red;
+  }
+  &:nth-child(3):not(:focus) {
+    background: yellow;
+  }
+  &:nth-child(4):not(:focus) {
+    background: beige;
+  }
+  &:nth-child(5):not(:focus) {
+    background: green;
+  }
+  &:nth-child(6):not(:focus) {
+    background: purple;
+  }
+  &:nth-child(7):not(:focus) {
+    background: maroon;
+  }
+  &:nth-child(8):not(:focus) {
+    background: blue;
+  }
+  &:nth-child(9):not(:focus) {
+    background: lightgreen;
+  }
+  &:nth-child(11):not(:focus) {
+    background: lightgreen;
+  }
+  &:nth-child(12):not(:focus) {
+    background: lightyellow;
+  }
+  &:nth-child(13):not(:focus) {
+    background: lemonchiffon;
+  }
+  &:nth-child(14):not(:focus) {
+    background: orange;
+  }
+  &:nth-child(15):not(:focus) {
+    background: lightcoral;
+  }
+  &:nth-child(16):not(:focus) {
+    background: orange;
+  }
+  &:nth-child(17):not(:focus) {
+    background: peachpuff;
+  }
+
+  &::first-letter,
+  &:focus,
+  &[selected] {
+    text-shadow:
+    -1px -1px 0 white,  
+     1px -1px 0 white,
+    -1px  1px 0 white,
+     1px  1px 0 white;
+  }
 }

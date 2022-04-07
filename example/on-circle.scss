@@ -1,11 +1,6 @@
-// https://css-tricks.com/snippets/sass/placing-items-circle/
+// edited version of the one found on https://css-tricks.com/snippets/sass/placing-items-circle/
+@use "sass:math"; // to replace ($item-size / 2) with math.div($item-size, 2)
 
-/// Mixin to place items on a circle
-/// @author Kitty Giraudel
-/// @author Ana Tudor
-/// @param {Integer} $item-count - Number of items on the circle
-/// @param {Length} $circle-size - Large circle size
-/// @param {Length} $item-size - Single item size
 @mixin on-circle($item-count, $circle-size, $item-size) {
   position: relative;
   width:  $circle-size;
@@ -21,16 +16,16 @@
     left: 50%;
     width:  $item-size;
     height: $item-size;
-    margin: -($item-size / 2);
+    margin: -(math.div($item-size, 2));
   
-    $angle: (360 / $item-count);
+    $angle: math.div(360, $item-count);
     $rot: 0;
 
     @for $i from 1 through $item-count {
       &:nth-of-type(#{$i}) {
         transform: 
           rotate($rot * 1deg) 
-          translate($circle-size / 2) 
+          translate(math.div($circle-size, 2)) 
           rotate($rot * -1deg);
       }
 

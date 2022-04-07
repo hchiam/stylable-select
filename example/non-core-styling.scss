@@ -18,4 +18,22 @@ main {
   width: fit-content;
   padding-inline: 1rem;
   margin: 3rem auto 1rem;
+  box-shadow: 5px 5px 5px #222222bf;
+
+  @media (prefers-reduced-motion: no-preference) {
+    transform: scale(2);
+    animation: grab-attention 2s forwards;
+
+    @keyframes grab-attention {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  }
 }
