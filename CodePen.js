@@ -81,6 +81,14 @@ function createStylableSelect(simulatedSelect, optionsData = []) {
         options.attr("tabindex", "0");
       }
     })
+    .on("focusout", function (e) {
+      const target = $(e.target);
+      const isOption = target.is('[role="option"]');
+      const isOptionsEnd = target.is(".simulated-select-options-end");
+      if (!isOption && !isOptionsEnd) {
+        options.attr("tabindex", "-1"); // disable tabbing to all options
+      }
+    })
     .on("keyup", function (e) {
       const target = $(e.target);
       const isWrapper = target.is(".simulated-select-options-wrapper");
