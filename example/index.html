@@ -25,5 +25,12 @@
     </main>
     <script src="../CodePen.js"></script>
     <link rel="stylesheet" href="example.scss" />
+    <script>
+      $(document).ready(() => {
+        setTimeout(() => {
+          $(".simulated-select-options-wrapper > *:first").focus();
+        }, 1000);
+      });
+    </script>
   </body>
 </html>
