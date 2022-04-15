@@ -83,9 +83,10 @@ function createStylableSelect(simulatedSelect, optionsData = []) {
     })
     .on("focusout", function (e) {
       const target = $(e.target);
+      const isWrapper = target.is(".simulated-select-options-wrapper");
       const isOption = target.is('[role="option"]');
       const isOptionsEnd = target.is(".simulated-select-options-end");
-      if (!isOption && !isOptionsEnd) {
+      if (!isWrapper && !isOption && !isOptionsEnd) {
         options.attr("tabindex", "-1"); // disable tabbing to all options
       }
     })
@@ -94,6 +95,7 @@ function createStylableSelect(simulatedSelect, optionsData = []) {
       const isWrapper = target.is(".simulated-select-options-wrapper");
       const isOption = target.is('[role="option"]');
       const isOptionsEnd = target.is(".simulated-select-options-end");
+
       if (hitEsc(e)) {
         optionsEnd.focus();
         options.attr("tabindex", "-1");
