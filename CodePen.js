@@ -74,6 +74,12 @@ function createStylableSelect(simulatedSelect, optionsData = []) {
       options.attr("tabindex", "0"); // enable styles related to focus for mouse users
 
       optionsEnd.attr("aria-label", `You selected: ${option.text()}`);
+
+      const changedValue =
+        previousSelection.attr("value") !== option.attr("value") &&
+        previousSelection.attr("value") !== undefined;
+
+      if (changedValue) optionsEnd.focus().blur();
     })
     .on("focus", function (e) {
       const isOption = $(e.target).is('[role="option"]');
