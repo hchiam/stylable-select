@@ -76,8 +76,10 @@ function createStylableSelect(simulatedSelect, optionsData = []) {
       optionsEnd.attr("aria-label", `You selected: ${option.text()}`);
 
       const changedValue =
-        previousSelection.attr("value") !== option.attr("value") &&
-        previousSelection.attr("value") !== undefined;
+        (previousSelection.attr("value") !== option.attr("value") &&
+          previousSelection.attr("value") !== undefined) ||
+        (previousSelection.text() !== option.text() &&
+          previousSelection.text());
 
       if (changedValue) optionsEnd.focus().blur();
     })
