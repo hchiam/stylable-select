@@ -31,3 +31,13 @@ Update:
 - `CodePen.scss`
 
 to match the CodePen demo https://codepen.io/hchiam/pen/wvprLpV
+
+## Examples:
+
+### pill shape example:
+
+![pill shape example](pill-shape-example/pill-shape.png)
+
+### circular example:
+
+![circular example](circular-example/circular.png)
