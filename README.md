@@ -12,6 +12,16 @@ This GitHub repo serves as a more restorable backup of this CodePen demo:
 
 https://codepen.io/hchiam/pen/wvprLpV
 
+## Examples:
+
+### [pill shape example](https://github.com/hchiam/stylable-select/tree/main/pill-shape-example):
+
+![pill shape example](pill-shape-example/pill-shape.png)
+
+### [circular example](https://github.com/hchiam/stylable-select/tree/main/circular-example):
+
+![circular example](circular-example/circular.png)
+
 ## To run this GitHub repo demo:
 
 (You'll need [`yarn`](https://github.com/hchiam/learning-yarn) set up.)
@@ -33,13 +43,3 @@ Update:
 - `CodePen.scss`
 
 to match the CodePen demo https://codepen.io/hchiam/pen/wvprLpV
-
-## Examples:
-
-### [pill shape example](https://github.com/hchiam/stylable-select/tree/main/pill-shape-example):
-
-![pill shape example](pill-shape-example/pill-shape.png)
-
-### [circular example](https://github.com/hchiam/stylable-select/tree/main/circular-example):
-
-![circular example](circular-example/circular.png)
