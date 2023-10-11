@@ -4,6 +4,8 @@ A simulated select dropdown that can be styled with CSS across all browsers/OSs.
 
 Tested on Chrome, Firefox, Mac, Android. Had some accessibility testing.
 
+![base example](base-example.png)
+
 This project was generated using [hchiam](https://github.com/hchiam)'s [`project-template`](https://github.com/hchiam/project-template).
 
 This GitHub repo serves as a more restorable backup of this CodePen demo:
@@ -34,10 +36,10 @@ to match the CodePen demo https://codepen.io/hchiam/pen/wvprLpV
 
 ## Examples:
 
-### pill shape example:
+### [pill shape example](https://github.com/hchiam/stylable-select/tree/main/pill-shape-example):
 
 ![pill shape example](pill-shape-example/pill-shape.png)
 
-### circular example:
+### [circular example](https://github.com/hchiam/stylable-select/tree/main/circular-example):
 
 ![circular example](circular-example/circular.png)
