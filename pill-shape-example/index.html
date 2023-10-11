@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Styled example</title>
+    <title>Styled example - pill shape</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="../CodePen.scss" />
     <link
@@ -12,25 +12,17 @@
       integrity="sha384-fVUNiK/R+LmLKHaPY3Lc5NrrrFrpUi9i3xirZsFEieuXFgqqe7nqsyUlzYF+XxoS"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="non-core-styling.scss" />
+    <!-- <link rel="stylesheet" href="non-core-styling.scss" /> -->
   </head>
   <body>
-    <h1>Styled example</h1>
     <p>Return to CodePen example: <a href="/">main</a></p>
-    <p class="instruction">
-      Use the up/down arrow keys to change between options:
-    </p>
     <main>
-      <div class="simulated-select"></div>
+      <div class="pill">
+        <span>Select a fruit:</span>
+        <div class="simulated-select"></div>
+      </div>
     </main>
     <script src="../CodePen.js"></script>
     <link rel="stylesheet" href="example.scss" />
-    <script>
-      $(document).ready(() => {
-        setTimeout(() => {
-          $(".simulated-select-options-wrapper > *:first").focus();
-        }, 1000);
-      });
-    </script>
   </body>
 </html>
