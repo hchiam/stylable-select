@@ -2,56 +2,56 @@ const simulatedSelect = $(".simulated-select");
 const optionsData = [
   {
     Value: "",
-    Text: "Select",
+    Text: "Select"
   },
   {
-    Text: "Apple",
+    Text: "Apple"
   },
   {
-    Text: "Banana",
+    Text: "Banana"
   },
   {
-    Text: "Coconut",
+    Text: "Coconut"
   },
   {
-    Text: "Durian",
+    Text: "Durian"
   },
   {
-    Text: "Eggplant",
+    Text: "Eggplant"
   },
   {
-    Text: "Fig",
+    Text: "Fig"
   },
   {
-    Text: "Grape",
+    Text: "Grape"
   },
   {
-    Text: "Honeydew",
+    Text: "Honeydew"
   },
   {
-    Text: "Icecream",
+    Text: "Icecream"
   },
   {
-    Text: "Jackfruit",
+    Text: "Jackfruit"
   },
   {
-    Text: "Kiwi",
+    Text: "Kiwi"
   },
   {
-    Text: "Lemon",
+    Text: "Lemon"
   },
   {
-    Text: "Mango",
+    Text: "Mango"
   },
   {
-    Text: "Nectarine",
+    Text: "Nectarine"
   },
   {
-    Text: "Orange",
+    Text: "Orange"
   },
   {
-    Text: "Peach",
-  },
+    Text: "Peach"
+  }
 ];
 createStylableSelect(simulatedSelect, optionsData);
 
@@ -78,7 +78,8 @@ function createStylableSelect(simulatedSelect, optionsData = []) {
       const changedValue =
         (previousSelection.attr("value") !== option.attr("value") &&
           previousSelection.attr("value") !== undefined) ||
-        (previousSelection.attr("value") === undefined && option.attr("value")) ||
+        (previousSelection.attr("value") === undefined &&
+          option.attr("value")) ||
         (previousSelection.text() !== option.text() &&
           previousSelection.text());
 
