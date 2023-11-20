@@ -78,6 +78,7 @@ function createStylableSelect(simulatedSelect, optionsData = []) {
       const changedValue =
         (previousSelection.attr("value") !== option.attr("value") &&
           previousSelection.attr("value") !== undefined) ||
+        (previousSelection.attr("value") === undefined && option.attr("value")) ||
         (previousSelection.text() !== option.text() &&
           previousSelection.text());
 
