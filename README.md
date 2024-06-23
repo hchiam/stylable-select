@@ -43,3 +43,7 @@ Update:
 - `CodePen.scss`
 
 to match the CodePen demo https://codepen.io/hchiam/pen/wvprLpV
+
+## You might also be interested in
+
+https://web.dev/patterns/components/split-buttons#js
